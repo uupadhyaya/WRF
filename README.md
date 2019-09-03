@@ -3,13 +3,12 @@ Installation and configuration of WRF version 3.9 and WRF-Chem 3.9 with KPP in O
 
 # Installation of WRFv 3.9
 
-### Softwares installed using Zypper
+## Softwares installed using Zypper
 
 zypper install -t pattern devel_C_C++
-
 zypper install -t pattern devel_basis
 
-### Linking Software Packages
+## Linking Software Packages
 
 ln –sf /usr/bin/gcc-6 /usr/bin/cc
 : ln –sf /usr/bin/gcc-6 /usr/bin/gcc
@@ -20,7 +19,7 @@ ln -sf /usr/bin/gcc-ar-6 /usr/bin/gcc-ar
 
 ln -sf /usr/bin/gcc-nm-6 /usr/bin/gcc-nm
 
-### Software Installed from Source 
+## Software Installed from Source 
 
 Tcl version 8.6.6
 
@@ -218,6 +217,3 @@ cd WPS
 ./configure
 Select 3 as the supported platform (Linux x86_64, gfortran    (dmpar))
 ./compile >& compile.log
-
-
-
