@@ -12,8 +12,7 @@ zypper install -t pattern devel_basis
 ### Linking Software Packages
 
 ln –sf /usr/bin/gcc-6 /usr/bin/cc
-
-ln –sf /usr/bin/gcc-6 /usr/bin/gcc
+: ln –sf /usr/bin/gcc-6 /usr/bin/gcc
 
 ln –sf /usr/bin/cpp-6 /usr/bin/cpp
 
