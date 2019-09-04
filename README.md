@@ -8,7 +8,7 @@ Installation and configuration of WRF version 3.9 and WRF-Chem 3.9 with KPP in O
 zypper install -t pattern devel_C_C++  
 zypper install -t pattern devel_basis
 
-## Linking Software Packages
+### Linking Software Packages
 
 ln –sf /usr/bin/gcc-6 /usr/bin/cc  
 ln –sf /usr/bin/gcc-6 /usr/bin/gcc  
@@ -16,7 +16,7 @@ ln –sf /usr/bin/cpp-6 /usr/bin/cpp
 ln -sf /usr/bin/gcc-ar-6 /usr/bin/gcc-ar  
 ln -sf /usr/bin/gcc-nm-6 /usr/bin/gcc-nm  
 
-## Software Installed from Source 
+### Software Installed from Source 
 
 Tcl version 8.6.6  
 ./configure --prefix=$TCLv  
@@ -129,7 +129,7 @@ cd $NCLv
 tar zxvf ncl_ncarg-6.0.0.Linux_SUSE_ia64_nodap_gcc412.tar.gz  
 // Noted: Used SUSE version. The latest version are available for CentOS, RHEL and Debian System. The   latest version for NCL for CentOS has also been installed.//  
 
-## WRF (Version 3.9, released April 17, 2017)  
+### WRF (Version 3.9, released April 17, 2017)  
 
 Make sure the following environments are set in your .bashrc or setenv.sh   
 export WRF_EM_CORE=1  
@@ -143,7 +143,7 @@ cd WRFV3
 Select Linux x86_64 option: 34 ----> dmpar GNU (gfortran/gcc)    
 ./compile em_real >& compile.log  
 
-WRF-Chem (Version 3.9, released April 18, 2017)    
+### WRF-Chem (Version 3.9, released April 18, 2017)    
 wget http://www2.mmm.ucar.edu/wrf/src/WRFV3-Chem-3.9.TAR.gz    
 tar zxvf WRFV3-Chem-3.9.TAR.gz  
 ./clean -a  
@@ -153,7 +153,7 @@ export WRF_KPP=1
 ./configure  
 ./compile em_real >& compile.log  
 
-WPS  
+### WPS (Version 3.9)
 cd ..  
 wget http://www2.mmm.ucar.edu/wrf/src/WPSV3.9.TAR.gz     
 tar zxvf WPSV3.9.TAR.gz  
