@@ -252,19 +252,14 @@ export UDUNITS2_PATH=$UDUNITSv
 export ANTLR_PATH=$ANTLRv  
 export CLASSPATH=$ANTLRv:$CLASSPATH  
 
-## ENVIRONMENT MODULES ##  
-export MODULESHOME=$MODULES  
-export MDIR=$MODULESv  
-export MODULEPATH=${MDIR}/3.2.10/modulefiles  
-
-## PVM ##
+### PVM
 export PVM_ROOT=/usr/lib/pvm3  
 export PVM_ARCH=LINUX64  
 export PVM_RSH=/usr/bin/ssh  
 export PATH=$PVM_ROOT/bin:$PATH  
 export PVM_ARCH=LINUX64  
 
-## IOAPI ##
+### Ioapi
 export BIN=Linux2_x86_64gfort  
 export PATH=$IOAPIv/Linux2_x86_64gfort/bin:$PATH  
 
