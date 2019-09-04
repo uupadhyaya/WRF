@@ -257,7 +257,7 @@ export BIN=Linux2_x86_64gfort
 export PATH=$IOAPIv/Linux2_x86_64gfort/bin:$PATH  
 
 # WRF
-Installation and configuration of WRF version 3.9 and WRF-Chem 3.9 with KPP in OpenSUSE Leap 42.2
+> Installation and configuration of WRF version 3.9 and WRF-Chem 3.9 with KPP in OpenSUSE Leap 42.2 without the use of Modules
 
 ## Installation of WRFv 3.9  
 
@@ -366,7 +366,9 @@ ln -sf /home/<username>/Develops/Dependencies/NetCDF/NetCDF-4.4.4.1[4.4.4]/lib64
 ln -sf /home/<username>/Develops/Dependencies/NetCDF/NetCDF-4.4.4.1[4.4.4]/lib64/libnetcdff.a /usr/lib/libnetcdff.a
 ln -sf /home/<username>/Develops/Dependencies/Bison/Bison-2.1/bin/yacc /usr/bin/yacc  
 cp /home/<username>/Develops/Dependencies/Hdf5/Hdf5-1.8.18/lib64/libhdf5*a /home/uupadhyaya/Tarballs/ioapi-3.2/Linux2x8664gfort/.
-cp /home/<username>/Develops/Dependencies/Hdf5/Hdf5-1.8.18/lib64/libnetcdf*.a /home/<username>/Tarballs/ioapi-3.2/Linux2_x86_64gfort/.
+cp /home/<username>/Develops/Dependencies/Hdf5/Hdf5-1.8.18/lib64/libnetcdf*.a /home/<username>/Tarballs/ioapi-3.2/Linux2_x86_> We loved with a love that was more than love
+
+64gfort/.
 cp /home/<username>/Develops/Dependencies/Zlib/Zlib-1.2.12/lib/*.a /home/uupadhyaya/Tarballs/ioapi-3.2/Linux2_x86_64gfort/.
   
 Cdo version 1.8.1 rc2  
