@@ -1,211 +1,211 @@
-//Create a setenv.sh in /home/<username> directory //
+# Create a setenv.sh in /home/<username> directory
 #-----------------------------------------------------------------------#
 #                                                                       #
 # SCRIPT:                                                               #
 #     setenv.sh                                                         #
 #                                                                       #
 # DESCRIPTION:                                                          #
-#     Set the environment for running WRF                				#
+#     			Set the environment for running WRF                		#
 #-----------------------------------------------------------------------#
 #-----------------------------------------------------------------------#
 ############################### Environment #############################
 #-----------------------------------------------------------------------#
 
-## Set Colorful Prompt ##
-export PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\]’
+## Set Colorful Prompt ##  
+export PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\]’  
 
-## Resources Limits ##
-ulimit -s unlimited
+## Resources Limits ##  
+ulimit -s unlimited  
 
-## System Configuration ##
-export OPENSSL=openssl
-export YACC="yacc -d"
-export J="-j 12"
+## System Configuration ##  
+export OPENSSL=openssl  
+export YACC="yacc -d"  
+export J="-j 12"  
 
-# Alias #
-LSCOLOR="--color=auto"
-alias ls="ls $LSCOLOR"
-alias ll="ls -lh $LSCOLOR"
-alias la="ls -Ah $LSCOLOR"
-alias lo="ls -lAh $LSCOLOR"
-alias lz="ls -lAhZ $LSCOLOR"
-alias l="ls -lAh $LSCOLOR"
+# Alias #  
+LSCOLOR="--color=auto"  
+alias ls="ls $LSCOLOR"  
+alias ll="ls -lh $LSCOLOR"  
+alias la="ls -Ah $LSCOLOR"  
+alias lo="ls -lAh $LSCOLOR"  
+alias lz="ls -lAhZ $LSCOLOR"  
+alias l="ls -lAh $LSCOLOR"  
 
-alias cd..="cd .."
-alias ..="cd .."
-alias c="clear"
-alias e="exit"
-alias k="pkill -u $USER"
-alias top="top -c"
+alias cd..="cd .."  
+alias ..="cd .."  
+alias c="clear"  
+alias e="exit"  
+alias k="pkill -u $USER"  
+alias top="top -c"  
 
 #-----------------------------------------------------------------------#
 ############################## Compilers ##############################
 #-----------------------------------------------------------------------#
-export CC=gcc
-export FC=gfortran
-export SERIAL_FC=gfortran
-export SERIAL_F77=gfortran
-export SERIAL_CC=gcc
-export SERIAL_CXX=g++
-export MPI_FC=mpif90
-export MPI_F77=mpif77
-export MPI_CC=mpicc
-export MPI_CXX=mpicxx
+export CC=gcc  
+export FC=gfortran  
+export SERIAL_FC=gfortran  
+export SERIAL_F77=gfortran  
+export SERIAL_CC=gcc  
+export SERIAL_CXX=g++  
+export MPI_FC=mpif90  
+export MPI_F77=mpif77  
+export MPI_CC=mpicc  
+export MPI_CXX=mpicxx  
 
 #### SET Environment Variables ###
 
-export PATH=./:$PATH
-export PATH=$HOME/bin:$PATH
+export PATH=./:$PATH  
+export PATH=$HOME/bin:$PATH  
 
 #-----------------------------------------------------------------------#
 ############################## Directories ##############################
 #-----------------------------------------------------------------------#
 
-# Define Compilers Directories
+# Define Compilers Directories  
 
-export GCCHOME=$COMPILERS/Gcc
-export INTELHOME=$COMPILERS/Intel
-export PGIHOME=$COMPILER/PGI
+export GCCHOME=$COMPILERS/Gcc  
+export INTELHOME=$COMPILERS/Intel  
+export PGIHOME=$COMPILER/PGI  
 
 # Define Common Directories
 
-export DEVELOPS=$HOME/Develops
-export MODULES=$HOME/Modules
-export COMPILERS=$DEVELOPS/Compilers
-export DEPENDENCIES=$DEVELOPS/Dependencies
-export WRF=$DEVELOPS/WRF
-export WRFHOME=$WRF/WRFV3
+export DEVELOPS=$HOME/Develops  
+export MODULES=$HOME/Modules  
+export COMPILERS=$DEVELOPS/Compilers  
+export DEPENDENCIES=$DEVELOPS/Dependencies  
+export WRF=$DEVELOPS/WRF  
+export WRFHOME=$WRF/WRFV3  
 
-export MPIHOME=$DEPENDENCIES/MPIs
-export GRIB2HOME=$DEPENDENCIES/Grib2
-export NCLHOME=$DEPENDENCIES/Ncl
-export JASPERHOME=$GRIB2HOME/Jasper
-export LIBPNGHOME=$GRIB2HOME/LibPNG
-export FLEXHOME=$DEPENDENCIES/Flex
-export NETCDFHOME=$DEPENDENCIES/NetCDF
-export ZLIBHOME=$DEPENDENCIES/Zlib
-export GMPHOME=$DEPENDENCIES/Gmp
-export M4HOME=$DEPENDENCIES/M4
-export MPFRHOME=$DEPENDENCIES/Mpfr
-export MPCHOME=$DEPENDENCIES/Mpc
-export GOHOME=$DEPENDENCIES/Go
-export MPICHHOME=$DEPENDENCIES/Mpich
-export OPENMPIHOME=$DEPENDENCIES/OpenMPI
-export AUTOCONFHOME=$DEPENDENCIES/Autoconf
-export LIBTOOLHOME=$DEPENDENCIES/Libtool
-export AUTOMAKEHOME=$DEPENDENCIES/Automake
-export FLEXHOME=$DEPENDENCIES/Flex
-export BYACCHOME=$DEPENDENCIES/Byacc
-export INTLTOOLHOME=$DEPENDENCIES/Intltool
-export CMAKEHOME=$DEPENDENCIES/Cmake
-export DOXYGENHOME=$DEPENDENCIES/Doxygen
-export CDOHOME=$DEPENDENCIES/Cdo
-export NCOHOME=$DEPENDENCIES/Nco
-export UDUNITSHOME=$DEPENDENCIES/UdUnits
-export ANTLRHOME=$DEPENDENCIES/Antlr
-export HDF5HOME=$DEPENDENCIES/Hdf5
-export PNETCDFHOME=$DEPENDENCIES/Pnetcdf
-export BISONHOME=$DEPENDENCIES/Bison
-export SZIPHOME=$DEPENDENCIES/Szip
-export TCLHOME=$DEPENDENCIES/Tcl
-export SZIPHOME=$DEPENDENCIES/Tk
-export PVMHOME=$DEPENDENCIES/Pvm
-export IOAPIHOME=$DEPENDENCIES/Ioapi
+export MPIHOME=$DEPENDENCIES/MPIs  
+export GRIB2HOME=$DEPENDENCIES/Grib2  
+export NCLHOME=$DEPENDENCIES/Ncl  
+export JASPERHOME=$GRIB2HOME/Jasper  
+export LIBPNGHOME=$GRIB2HOME/LibPNG  
+export FLEXHOME=$DEPENDENCIES/Flex  
+export NETCDFHOME=$DEPENDENCIES/NetCDF  
+export ZLIBHOME=$DEPENDENCIES/Zlib  
+export GMPHOME=$DEPENDENCIES/Gmp  
+export M4HOME=$DEPENDENCIES/M4  
+export MPFRHOME=$DEPENDENCIES/Mpfr  
+export MPCHOME=$DEPENDENCIES/Mpc  
+export GOHOME=$DEPENDENCIES/Go  
+export MPICHHOME=$DEPENDENCIES/Mpich  
+export OPENMPIHOME=$DEPENDENCIES/OpenMPI  
+export AUTOCONFHOME=$DEPENDENCIES/Autoconf  
+export LIBTOOLHOME=$DEPENDENCIES/Libtool  
+export AUTOMAKEHOME=$DEPENDENCIES/Automake  
+export FLEXHOME=$DEPENDENCIES/Flex  
+export BYACCHOME=$DEPENDENCIES/Byacc  
+export INTLTOOLHOME=$DEPENDENCIES/Intltool  
+export CMAKEHOME=$DEPENDENCIES/Cmake  
+export DOXYGENHOME=$DEPENDENCIES/Doxygen  
+export CDOHOME=$DEPENDENCIES/Cdo  
+export NCOHOME=$DEPENDENCIES/Nco  
+export UDUNITSHOME=$DEPENDENCIES/UdUnits  
+export ANTLRHOME=$DEPENDENCIES/Antlr  
+export HDF5HOME=$DEPENDENCIES/Hdf5  
+export PNETCDFHOME=$DEPENDENCIES/Pnetcdf  
+export BISONHOME=$DEPENDENCIES/Bison  
+export SZIPHOME=$DEPENDENCIES/Szip  
+export TCLHOME=$DEPENDENCIES/Tcl  
+export SZIPHOME=$DEPENDENCIES/Tk  
+export PVMHOME=$DEPENDENCIES/Pvm  
+export IOAPIHOME=$DEPENDENCIES/Ioapi  
 #-----------------------------------------------------------------------#
 ############################## Versions #################################
 #-----------------------------------------------------------------------#
 
-export FLEXv=$FLEXHOME/Flex-2.5.3
-export ZLIBv=$ZLIBHOME/Zlib-1.2.10
-export GMPv=$GMPHOME/Gmp-6.1.2
-export M4v=$M4HOME/M4-1.4.18
-export MPFRv=$MPFRHOME/Mpfr-3.1.5
-export MPCv=$MPCHOME/Mpc-1.0.3
-export GOv=$GOHOME/Go-1.1.2
-export NETCDFv=$NETCDFHOME/NetCDF-4.4.4.1[4.4.4]
-export MPICHv=$MPICHHOME/Mpich-3.1
-export OPENMPIv=$OPENMPIHOME/OpenMPI-2.0.2
-export AUTOCONFv=$AUTOCONFHOME/Autoconf-2.69
-export LIBTOOLv=$LIBTOOLHOME/Libtool-2.4.6
-export AUTOMAKEv=$AUTOMAKEHOME/Automake-1.15
-export LIBPNGv=$LIBPNGHOME/LibPNG-1.6.26
-export FLEXv=$FLEXHOME/Flex-2.6.0
-export BYACCv=$BYACCHOME/Byacc-1.9
-export GEDITv=$GEDITHOME/Gedit-3.22.0
-export INTLTOOLv=$INTLTOOLv/Intltool-0.50.2
-export JASPERv=$JASPERHOME/Jasper-2.0.12
-export CMAKEv=$CMAKEHOME/Cmake-3.7.2
-export NCLv=$NCLHOME/Ncl-6.0.0
-export DOXYGENv=$DOXYGENHOME/Doxygen-1.8.11
-export CDOv=$CDOHOME/Cdo-1.8.1
-export NCOv=$NCOHOME/Nco-4.6.6
-export UDUNITSv=$UDUNITSHOME/UdUnits-2.2.24
-export ANTLRv=$ANTLRHOME/Antlr-2.7.7
-export HDF5v=$HDF5HOME/Hdf5-1.8.18
-export PNETCDFv=$PNETCDFHOME/Pnetcdf-1.8.1
-export BISONv=$BISONHOME/Bison-2.1
-export SZIPv=$SZIPHOME/Szip-2.1.1
-export TCLv=$TCLHOME/Tcl-8.6.6
-export TKv=$TKHOME/Tk-8.6.6
-export IOAPIv=$IOAPIHOME/Ioapi-3.2
+export FLEXv=$FLEXHOME/Flex-2.5.3  
+export ZLIBv=$ZLIBHOME/Zlib-1.2.10  
+export GMPv=$GMPHOME/Gmp-6.1.2  
+export M4v=$M4HOME/M4-1.4.18  
+export MPFRv=$MPFRHOME/Mpfr-3.1.5  
+export MPCv=$MPCHOME/Mpc-1.0.3  
+export GOv=$GOHOME/Go-1.1.2  
+export NETCDFv=$NETCDFHOME/NetCDF-4.4.4.1[4.4.4]  
+export MPICHv=$MPICHHOME/Mpich-3.1  
+export OPENMPIv=$OPENMPIHOME/OpenMPI-2.0.2  
+export AUTOCONFv=$AUTOCONFHOME/Autoconf-2.69  
+export LIBTOOLv=$LIBTOOLHOME/Libtool-2.4.6  
+export AUTOMAKEv=$AUTOMAKEHOME/Automake-1.15  
+export LIBPNGv=$LIBPNGHOME/LibPNG-1.6.26  
+export FLEXv=$FLEXHOME/Flex-2.6.0  
+export BYACCv=$BYACCHOME/Byacc-1.9  
+export GEDITv=$GEDITHOME/Gedit-3.22.0  
+export INTLTOOLv=$INTLTOOLv/Intltool-0.50.2  
+export JASPERv=$JASPERHOME/Jasper-2.0.12  
+export CMAKEv=$CMAKEHOME/Cmake-3.7.2  
+export NCLv=$NCLHOME/Ncl-6.0.0  
+export DOXYGENv=$DOXYGENHOME/Doxygen-1.8.11  
+export CDOv=$CDOHOME/Cdo-1.8.1  
+export NCOv=$NCOHOME/Nco-4.6.6  
+export UDUNITSv=$UDUNITSHOME/UdUnits-2.2.24  
+export ANTLRv=$ANTLRHOME/Antlr-2.7.7  
+export HDF5v=$HDF5HOME/Hdf5-1.8.18  
+export PNETCDFv=$PNETCDFHOME/Pnetcdf-1.8.1  
+export BISONv=$BISONHOME/Bison-2.1  
+export SZIPv=$SZIPHOME/Szip-2.1.1  
+export TCLv=$TCLHOME/Tcl-8.6.6  
+export TKv=$TKHOME/Tk-8.6.6  
+export IOAPIv=$IOAPIHOME/Ioapi-3.2  
 
 
 #-----------------------------------------------------------------------#
 ################################## Path #################################
 #-----------------------------------------------------------------------#
 
-export PATH=$ZLIBv/bin:$PATH
-export PATH=$GCCv/bin:$PATH
-export PATH=$GMPv/bin:$PATH
-export PATH=$M4v/bin:$PATH
-export PATH=$MPFRv/bin:$PATH
-export PATH=$MPICHv/bin:$PATH
-export PATH=$AUTOCONFv/bin:$PATH
-export PATH=$LIBTOOLv/bin:$PATH
-export PATH=$AUTOMAKEv/bin:$PATH
-export PATH=$LibPNGv/bin:$PATH
-export PATH=$FLEXv/bin:$PATH
-export PATH=$CMAKEv/bin:$PATH
-export PATH=$JASPERv/bin:$PATH
-export PATH=$DOXYGENv/bin:$PATH
-export PATH=$BYACCv/bin:$PATH
-export PATH=$LIBPNGv/bin:$PATH
-export PATH=$NCLv/bin:$PATH
-export PATH=$NETCDFv/bin:$PATH
-export PATH=$CDOv/bin:$PATH
-export PATH=$NCOv/bin:$PATH
-export PATH=$UDUNITSv/bin:$PATH
-export PATH=$HDF5v/bin:$PATH
-export PATH=$PNETCDFv/bin:$PATH
-export PATH=$BISONv/bin:$PATH
-export PATH=$ANTLRv/bin:$PATH
-export PATH=$NCOv/bin:$PATH
+export PATH=$ZLIBv/bin:$PATH  
+export PATH=$GCCv/bin:$PATH  
+export PATH=$GMPv/bin:$PATH  
+export PATH=$M4v/bin:$PATH  
+export PATH=$MPFRv/bin:$PATH  
+export PATH=$MPICHv/bin:$PATH  
+export PATH=$AUTOCONFv/bin:$PATH  
+export PATH=$LIBTOOLv/bin:$PATH  
+export PATH=$AUTOMAKEv/bin:$PATH  
+export PATH=$LibPNGv/bin:$PATH  
+export PATH=$FLEXv/bin:$PATH  
+export PATH=$CMAKEv/bin:$PATH  
+export PATH=$JASPERv/bin:$PATH  
+export PATH=$DOXYGENv/bin:$PATH  
+export PATH=$BYACCv/bin:$PATH  
+export PATH=$LIBPNGv/bin:$PATH  
+export PATH=$NCLv/bin:$PATH  
+export PATH=$NETCDFv/bin:$PATH  
+export PATH=$CDOv/bin:$PATH  
+export PATH=$NCOv/bin:$PATH  
+export PATH=$UDUNITSv/bin:$PATH  
+export PATH=$HDF5v/bin:$PATH  
+export PATH=$PNETCDFv/bin:$PATH  
+export PATH=$BISONv/bin:$PATH  
+export PATH=$ANTLRv/bin:$PATH  
+export PATH=$NCOv/bin:$PATH  
 
 #-----------------------------------------------------------------------#
 #########################################################################
-Library Path
+Library Path  
 #########################################################################
 #-----------------------------------------------------------------------#
-export LD_LIBRARY_PATH=$MPICHv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$ZLIBv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$GMPv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$MPICHv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$AUTOCONFv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$LIBTOOLv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$AUTOMAKEv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$LIBPNGv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$JASPERv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$DOXYGENv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$NCLv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$FLEXv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$NETCDFv/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$UDUNITSv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$HDF5v/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$PNETCDFv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$BISONv/lib:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$ANTLRv/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$NCOv/lib64:$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$SZIPv/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$MPICHv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$ZLIBv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$GMPv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$MPICHv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$AUTOCONFv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$LIBTOOLv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$AUTOMAKEv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$LIBPNGv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$JASPERv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$DOXYGENv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$NCLv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$FLEXv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$NETCDFv/lib64:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$UDUNITSv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$HDF5v/lib64:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$PNETCDFv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$BISONv/lib:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$ANTLRv/lib64:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$NCOv/lib64:$LD_LIBRARY_PATH  
+export LD_LIBRARY_PATH=$SZIPv/lib64:$LD_LIBRARY_PATH  
 
 #-----------------------------------------------------------------------#
 ########################################################################
@@ -213,100 +213,100 @@ Include
 #########################################################################
 #-----------------------------------------------------------------------#
 
-export INCLUDE=$ZLIBv/include:$INCLUDE
-export INCLUDE=$GCCv/include:$INCLUDE
-export INCLUDE=$GMPv/include:$INCLUDE
-export INCLUDE=$AUTOCONFv/include:$INCLUDE
-export INCLUDE=$LIBTOOLv/include:$INCLUDE
-export INCLUDE=$AUTOMAKEv/include:$INCLUDE
-export INCLUDE=$LIBPNGv/include:$INCLUDE
-export INCLUDE=$FLEXv/include:$INCLUDE
-export INCLUDE=$JASPERv/jasper/include:$INCLUDE
-export INCLUDE=$DOXYGENv/include:$INCLUDE
-export INCLUDE=$FLEXv/include:$INCLUDE
-export INCLUDE=$MPICHv/include:$INCLUDE
-export INCLUDE=$NETCDFv/include:$INCLUDE
-export INCLUDE=$UDUNITSv/include:$INCLUDE
-export INCLUDE=$HDF5v/include:$INCLUDE
-export INCLUDE=$PNETCDFv/include:$INCLUDE
-export INCLUDE=$ANTLRv/include:$INCLUDE
-export INCLUDE=$NCOv/include:$INCLUDE
-export INCLUDE=$SZIPv/include:$INCLUDE
+export INCLUDE=$ZLIBv/include:$INCLUDE  
+export INCLUDE=$GCCv/include:$INCLUDE  
+export INCLUDE=$GMPv/include:$INCLUDE  
+export INCLUDE=$AUTOCONFv/include:$INCLUDE  
+export INCLUDE=$LIBTOOLv/include:$INCLUDE  
+export INCLUDE=$AUTOMAKEv/include:$INCLUDE  
+export INCLUDE=$LIBPNGv/include:$INCLUDE  
+export INCLUDE=$FLEXv/include:$INCLUDE  
+export INCLUDE=$JASPERv/jasper/include:$INCLUDE  
+export INCLUDE=$DOXYGENv/include:$INCLUDE  
+export INCLUDE=$FLEXv/include:$INCLUDE  
+export INCLUDE=$MPICHv/include:$INCLUDE  
+export INCLUDE=$NETCDFv/include:$INCLUDE  
+export INCLUDE=$UDUNITSv/include:$INCLUDE  
+export INCLUDE=$HDF5v/include:$INCLUDE  
+export INCLUDE=$PNETCDFv/include:$INCLUDE  
+export INCLUDE=$ANTLRv/include:$INCLUDE  
+export INCLUDE=$NCOv/include:$INCLUDE  
+export INCLUDE=$SZIPv/include:$INCLUDE  
 
 ##FLEX ##
-export FLEX=$FLEXHOME
-export FLEX_LIB_DIR=$FLEXv/lib
+export FLEX=$FLEXHOME  
+export FLEX_LIB_DIR=$FLEXv/lib  
 
 ##HDF5 ##
-export HDF5DIR=$HDF5v
-export HDF5_DIR=$HDF5DIR
-export HDF5_LIB_DIR=$HDF5v/lib
+export HDF5DIR=$HDF5v  
+export HDF5_DIR=$HDF5DIR  
+export HDF5_LIB_DIR=$HDF5v/lib  
 
 ##NETCDF##
-export NETCDF_HOME=$NETCDFv
-export NETCDF_PREFIX=$NETCDF_HOME
-export NETCDF_INC=$NETCDFv/include
-export NETCDF_LIB=$NETCDFv/lib64
-export NETCDF4_LIB=$NETCDF_LIB
-export NETCDF_ROOT=$NETCDFv
-export NETCDF4_ROOT=$NETCDFv
-export NETCDF=$NETCDF_ROOT
+export NETCDF_HOME=$NETCDFv  
+export NETCDF_PREFIX=$NETCDF_HOME  
+export NETCDF_INC=$NETCDFv/include  
+export NETCDF_LIB=$NETCDFv/lib64  
+export NETCDF4_LIB=$NETCDF_LIB  
+export NETCDF_ROOT=$NETCDFv  
+export NETCDF4_ROOT=$NETCDFv  
+export NETCDF=$NETCDF_ROOT  
 
 ##JASPER ##
-export JASPERLIB=$JASPERv/lib
-export JASPERINC=$JASPERv/include
+export JASPERLIB=$JASPERv/lib  
+export JASPERINC=$JASPERv/include  
 
 ##NCL##
-export NCL_NCARG=$NCLv
+export NCL_NCARG=$NCLv  
 
 ##WRF##
-export WRFV3=$WRFHOME
-export WRF_SRC_ROOT_DIR=$WRFHOME
-export WRF_EM_CORE=1
-export WRF_NMM_CORE=0
-export WRFIO_NCD_LARGE_FILE_SUPPORT=1
+export WRFV3=$WRFHOME  
+export WRF_SRC_ROOT_DIR=$WRFHOME  
+export WRF_EM_CORE=1  
+export WRF_NMM_CORE=0  
+export WRFIO_NCD_LARGE_FILE_SUPPORT=1  
 
-##WRFCHEM ##
-export WRF_CHEM=1
-export WRF_KPP=1
+##WRFCHEM ##  
+export WRF_CHEM=1  
+export WRF_KPP=1  
 
-##UDUNITS##
-export UDUNITS_PATH=$UDUNITSv
-export UDUNITS2_PATH=$UDUNITSv
+##UDUNITS##  
+export UDUNITS_PATH=$UDUNITSv  
+export UDUNITS2_PATH=$UDUNITSv  
 
-##ANTLR##
-export ANTLR_PATH=$ANTLRv
-export CLASSPATH=$ANTLRv:$CLASSPATH
+##ANTLR##  
+export ANTLR_PATH=$ANTLRv  
+export CLASSPATH=$ANTLRv:$CLASSPATH  
 
-## ENVIRONMENT MODULES ##
-export MODULESHOME=$MODULES
-export MDIR=$MODULESv
-export MODULEPATH=${MDIR}/3.2.10/modulefiles
+## ENVIRONMENT MODULES ##  
+export MODULESHOME=$MODULES  
+export MDIR=$MODULESv  
+export MODULEPATH=${MDIR}/3.2.10/modulefiles  
 
 ## PVM ##
-export PVM_ROOT=/usr/lib/pvm3
-export PVM_ARCH=LINUX64
-export PVM_RSH=/usr/bin/ssh
-export PATH=$PVM_ROOT/bin:$PATH
-export PVM_ARCH=LINUX64
+export PVM_ROOT=/usr/lib/pvm3  
+export PVM_ARCH=LINUX64  
+export PVM_RSH=/usr/bin/ssh  
+export PATH=$PVM_ROOT/bin:$PATH  
+export PVM_ARCH=LINUX64  
 
 ## IOAPI ##
-export BIN=Linux2_x86_64gfort
-export PATH=$IOAPIv/Linux2_x86_64gfort/bin:$PATH
+export BIN=Linux2_x86_64gfort  
+export PATH=$IOAPIv/Linux2_x86_64gfort/bin:$PATH  
 
 # WRF
 Installation and configuration of WRF version 3.9 and WRF-Chem 3.9 with KPP in OpenSUSE Leap 42.2
 
-## Installation of WRFv 3.9
+## Installation of WRFv 3.9  
 
-### Softwares installed using Zypper
+### Softwares installed using Zypper  
 
 zypper install -t pattern devel_C_C++  
-zypper install -t pattern devel_basis
+zypper install -t pattern devel_basis  
 
-### Linking Software Packages
+### Linking Software Packages  
 
-ln –sf /usr/bin/gcc-6 /usr/bin/cc  
+ln –sf /usr/bin/gcc-6 /usr/bin/cc    
 ln –sf /usr/bin/gcc-6 /usr/bin/gcc  
 ln –sf /usr/bin/cpp-6 /usr/bin/cpp  
 ln -sf /usr/bin/gcc-ar-6 /usr/bin/gcc-ar  
