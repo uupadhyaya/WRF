@@ -2,15 +2,15 @@
 
   
 export PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\]’  
-### Resources Limits    
+### Resources Limits      
 ulimit -s unlimited  
 
-## System Configuration ##  
+### System Configuration  
 export OPENSSL=openssl  
 export YACC="yacc -d"  
 export J="-j 12"  
 
-# Alias #  
+### Alias  
 LSCOLOR="--color=auto"  
 alias ls="ls $LSCOLOR"  
 alias ll="ls -lh $LSCOLOR"  
