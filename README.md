@@ -365,7 +365,7 @@ make install 2>&1 | tee $NETCDFv.install
 ln –sf /home/<username>/Develops/Dependencies/NetCDF/NetCDF-4.4.4.1[4.4.4]/lib64/libnetcdf.a  /usr/lib/libnetcdf.a
 ln –sf /home/<username>/Develops/Dependencies/NetCDF/NetCDF-4.4.4.1[4.4.4]/lib64/libnetcdff.a /usr/lib/libnetcdff.a
 ln -sf /home/<username>/Develops/Dependencies/Bison/Bison-2.1/bin/yacc /usr/bin/yacc  
-cp /home/<username>/Develops/Dependencies/Hdf5/Hdf5-1.8.18/lib64/libhdf5*a /home/uupadhyaya/Tarballs/ioapi-3.2/Linux2_x86_64gfort/. 
+cp /home/<username>/Develops/Dependencies/Hdf5/Hdf5-1.8.18/lib64/libhdf5*a /home/uupadhyaya/Tarballs/ioapi-3.2/Linux2x8664gfort/.
 cp /home/<username>/Develops/Dependencies/Hdf5/Hdf5-1.8.18/lib64/libnetcdf*.a /home/<username>/Tarballs/ioapi-3.2/Linux2_x86_64gfort/.
 cp /home/<username>/Develops/Dependencies/Zlib/Zlib-1.2.12/lib/*.a /home/uupadhyaya/Tarballs/ioapi-3.2/Linux2_x86_64gfort/.
   
