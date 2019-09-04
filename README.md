@@ -27,7 +27,7 @@ alias k="pkill -u $USER"
 alias top="top -c"  
 
 ### Compilers 
-  
+
 export CC=gcc  
 export FC=gfortran  
 export SERIAL_FC=gfortran  
@@ -40,7 +40,6 @@ export MPI_CC=mpicc
 export MPI_CXX=mpicxx  
 
 ### Set Environment Variables
-
 export PATH=./:$PATH  
 export PATH=$HOME/bin:$PATH  
 
@@ -49,8 +48,6 @@ export PATH=$HOME/bin:$PATH
 ### Define Compiler Directories  
 
 export GCCHOME=$COMPILERS/Gcc  
-export INTELHOME=$COMPILERS/Intel  
-export PGIHOME=$COMPILER/PGI  
 
 ### Define Common Directories
 
@@ -75,7 +72,6 @@ export MPFRHOME=$DEPENDENCIES/Mpfr
 export MPCHOME=$DEPENDENCIES/Mpc  
 export GOHOME=$DEPENDENCIES/Go  
 export MPICHHOME=$DEPENDENCIES/Mpich  
-export OPENMPIHOME=$DEPENDENCIES/OpenMPI  
 export AUTOCONFHOME=$DEPENDENCIES/Autoconf  
 export LIBTOOLHOME=$DEPENDENCIES/Libtool  
 export AUTOMAKEHOME=$DEPENDENCIES/Automake  
@@ -89,7 +85,6 @@ export NCOHOME=$DEPENDENCIES/Nco
 export UDUNITSHOME=$DEPENDENCIES/UdUnits  
 export ANTLRHOME=$DEPENDENCIES/Antlr  
 export HDF5HOME=$DEPENDENCIES/Hdf5  
-export PNETCDFHOME=$DEPENDENCIES/Pnetcdf  
 export BISONHOME=$DEPENDENCIES/Bison  
 export SZIPHOME=$DEPENDENCIES/Szip  
 export TCLHOME=$DEPENDENCIES/Tcl  
@@ -99,7 +94,6 @@ export IOAPIHOME=$DEPENDENCIES/Ioapi
 
 ### Versions
 
-export FLEXv=$FLEXHOME/Flex-2.5.3  
 export ZLIBv=$ZLIBHOME/Zlib-1.2.10  
 export GMPv=$GMPHOME/Gmp-6.1.2  
 export M4v=$M4HOME/M4-1.4.18  
@@ -108,7 +102,6 @@ export MPCv=$MPCHOME/Mpc-1.0.3
 export GOv=$GOHOME/Go-1.1.2  
 export NETCDFv=$NETCDFHOME/NetCDF-4.4.4.1[4.4.4]  
 export MPICHv=$MPICHHOME/Mpich-3.1  
-export OPENMPIv=$OPENMPIHOME/OpenMPI-2.0.2  
 export AUTOCONFv=$AUTOCONFHOME/Autoconf-2.69  
 export LIBTOOLv=$LIBTOOLHOME/Libtool-2.4.6  
 export AUTOMAKEv=$AUTOMAKEHOME/Automake-1.15  
@@ -133,7 +126,7 @@ export TCLv=$TCLHOME/Tcl-8.6.6
 export TKv=$TKHOME/Tk-8.6.6  
 export IOAPIv=$IOAPIHOME/Ioapi-3.2  
 
-### PATH
+### Binary PATH
   
 export PATH=$ZLIBv/bin:$PATH  
 export PATH=$GCCv/bin:$PATH  
@@ -185,7 +178,7 @@ export LD_LIBRARY_PATH=$ANTLRv/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$NCOv/lib64:$LD_LIBRARY_PATH  
 export LD_LIBRARY_PATH=$SZIPv/lib64:$LD_LIBRARY_PATH  
 
-### Include
+### Include Path  
 
 export INCLUDE=$ZLIBv/include:$INCLUDE  
 export INCLUDE=$GCCv/include:$INCLUDE  
@@ -279,7 +272,7 @@ ln –sf /usr/bin/gcc-6 /usr/bin/cc
 ln –sf /usr/bin/gcc-6 /usr/bin/gcc  
 ln –sf /usr/bin/cpp-6 /usr/bin/cpp  
 ln -sf /usr/bin/gcc-ar-6 /usr/bin/gcc-ar  
-ln -sf /usr/bin/gcc-nm-6 /usr/bin/gcc-nm  
+ln -sf /usr/bin/gcc-nm-6 /usr/bin/gcc-nm
 
 ### Software Installed from Source 
 
@@ -367,6 +360,15 @@ make 2>&1 | tee $NETCDFv.make
 make install 2>&1 | tee $NETCDFv.install  
 // Note: Earlier versions of NetCDF was bundled with NetCDF-C and NetCDF-Fortran. However, with newer   versions, NetCDF-C and NetCDF-Fortran come in different packages. WRFv3.6 was compiled with NetCDF version  4.1.3. //  
 
+### Link the following software libraries
+  
+ln –sf /home/<username>/Develops/Dependencies/NetCDF/NetCDF-4.4.4.1[4.4.4]/lib64/libnetcdf.a  /usr/lib/libnetcdf.a  
+ln –sf /home/<username>/Develops/Dependencies/NetCDF/NetCDF-4.4.4.1[4.4.4]/lib64/libnetcdff.a /usr/lib/libnetcdff.a  
+ln -sf /home/<username>/Develops/Dependencies/Bison/Bison-2.1/bin/yacc /usr/bin/yacc  
+cp /home/<username>/Develops/Dependencies/Hdf5/Hdf5-1.8.18/lib64/libhdf5*a /home/uupadhyaya/Tarballs/ioapi-3.2/Linux2_x86_64gfort/.  
+cp /home/<username>/Develops/Dependencies/Hdf5/Hdf5-1.8.18/lib64/libnetcdf*.a /home/<username>/Tarballs/ioapi-3.2/Linux2_x86_64gfort/.  
+cp /home/<username>/Develops/Dependencies/Zlib/Zlib-1.2.12/lib/*.a /home/uupadhyaya/Tarballs/ioapi-3.2/Linux2_x86_64gfort/.  
+  
 Cdo version 1.8.1 rc2  
 export CFLAGS=-fPIC --enable-netcdf-4 --enable-zlib --with-hdf5=$HDF5v --with-jasper=$JASPERv --with-  netcdf=$NETCDFv  
 ./configure --prefix=$CDOv  
