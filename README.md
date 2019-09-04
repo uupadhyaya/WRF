@@ -1,8 +1,8 @@
 ### Create a setenv.sh in /home/<username> directory
-## Set Colorful Prompt ##  
-export PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\]’  
 
-## Resources Limits ##  
+  
+export PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\]’  
+### Resources Limits    
 ulimit -s unlimited  
 
 ## System Configuration ##  
