@@ -26,9 +26,8 @@ alias e="exit"
 alias k="pkill -u $USER"  
 alias top="top -c"  
 
-#-----------------------------------------------------------------------#
-############################## Compilers ##############################
-#-----------------------------------------------------------------------#
+### Compilers 
+  
 export CC=gcc  
 export FC=gfortran  
 export SERIAL_FC=gfortran  
@@ -40,22 +39,20 @@ export MPI_F77=mpif77
 export MPI_CC=mpicc  
 export MPI_CXX=mpicxx  
 
-#### SET Environment Variables ###
+### Set Environment Variables
 
 export PATH=./:$PATH  
 export PATH=$HOME/bin:$PATH  
 
-#-----------------------------------------------------------------------#
-############################## Directories ##############################
-#-----------------------------------------------------------------------#
+## Directories 
 
-# Define Compilers Directories  
+### Define Compiler Directories  
 
 export GCCHOME=$COMPILERS/Gcc  
 export INTELHOME=$COMPILERS/Intel  
 export PGIHOME=$COMPILER/PGI  
 
-# Define Common Directories
+### Define Common Directories
 
 export DEVELOPS=$HOME/Develops  
 export MODULES=$HOME/Modules  
@@ -99,9 +96,8 @@ export TCLHOME=$DEPENDENCIES/Tcl
 export SZIPHOME=$DEPENDENCIES/Tk  
 export PVMHOME=$DEPENDENCIES/Pvm  
 export IOAPIHOME=$DEPENDENCIES/Ioapi  
-#-----------------------------------------------------------------------#
-############################## Versions #################################
-#-----------------------------------------------------------------------#
+
+### Versions
 
 export FLEXv=$FLEXHOME/Flex-2.5.3  
 export ZLIBv=$ZLIBHOME/Zlib-1.2.10  
@@ -137,11 +133,8 @@ export TCLv=$TCLHOME/Tcl-8.6.6
 export TKv=$TKHOME/Tk-8.6.6  
 export IOAPIv=$IOAPIHOME/Ioapi-3.2  
 
-
-#-----------------------------------------------------------------------#
-################################## Path #################################
-#-----------------------------------------------------------------------#
-
+### PATH
+  
 export PATH=$ZLIBv/bin:$PATH  
 export PATH=$GCCv/bin:$PATH  
 export PATH=$GMPv/bin:$PATH  
@@ -169,11 +162,8 @@ export PATH=$BISONv/bin:$PATH
 export PATH=$ANTLRv/bin:$PATH  
 export PATH=$NCOv/bin:$PATH  
 
-#-----------------------------------------------------------------------#
-#########################################################################
-Library Path  
-#########################################################################
-#-----------------------------------------------------------------------#
+### Library Path
+  
 export LD_LIBRARY_PATH=$MPICHv/lib:$LD_LIBRARY_PATH  
 export LD_LIBRARY_PATH=$ZLIBv/lib:$LD_LIBRARY_PATH  
 export LD_LIBRARY_PATH=$GMPv/lib:$LD_LIBRARY_PATH  
@@ -195,11 +185,7 @@ export LD_LIBRARY_PATH=$ANTLRv/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=$NCOv/lib64:$LD_LIBRARY_PATH  
 export LD_LIBRARY_PATH=$SZIPv/lib64:$LD_LIBRARY_PATH  
 
-#-----------------------------------------------------------------------#
-########################################################################
-Include
-#########################################################################
-#-----------------------------------------------------------------------#
+### Include
 
 export INCLUDE=$ZLIBv/include:$INCLUDE  
 export INCLUDE=$GCCv/include:$INCLUDE  
@@ -221,16 +207,16 @@ export INCLUDE=$ANTLRv/include:$INCLUDE
 export INCLUDE=$NCOv/include:$INCLUDE  
 export INCLUDE=$SZIPv/include:$INCLUDE  
 
-##FLEX ##
+### Flex
 export FLEX=$FLEXHOME  
 export FLEX_LIB_DIR=$FLEXv/lib  
 
-##HDF5 ##
+### Hdf5
 export HDF5DIR=$HDF5v  
 export HDF5_DIR=$HDF5DIR  
 export HDF5_LIB_DIR=$HDF5v/lib  
 
-##NETCDF##
+### Netcdf
 export NETCDF_HOME=$NETCDFv  
 export NETCDF_PREFIX=$NETCDF_HOME  
 export NETCDF_INC=$NETCDFv/include  
@@ -240,29 +226,29 @@ export NETCDF_ROOT=$NETCDFv
 export NETCDF4_ROOT=$NETCDFv  
 export NETCDF=$NETCDF_ROOT  
 
-##JASPER ##
+### Jasper
 export JASPERLIB=$JASPERv/lib  
 export JASPERINC=$JASPERv/include  
 
-##NCL##
+### Ncl
 export NCL_NCARG=$NCLv  
 
-##WRF##
+### WRF
 export WRFV3=$WRFHOME  
 export WRF_SRC_ROOT_DIR=$WRFHOME  
 export WRF_EM_CORE=1  
 export WRF_NMM_CORE=0  
 export WRFIO_NCD_LARGE_FILE_SUPPORT=1  
 
-##WRFCHEM ##  
+### WRFChem  
 export WRF_CHEM=1  
 export WRF_KPP=1  
 
-##UDUNITS##  
+### UdUnits  
 export UDUNITS_PATH=$UDUNITSv  
 export UDUNITS2_PATH=$UDUNITSv  
 
-##ANTLR##  
+### Antlr  
 export ANTLR_PATH=$ANTLRv  
 export CLASSPATH=$ANTLRv:$CLASSPATH  
 
